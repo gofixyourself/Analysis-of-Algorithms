@@ -6,7 +6,7 @@
 
 | Labs  |     Stage     |
 | ------------- |:-------------:|
-|Levenshtein distance|:soon:|
+|[Levenshtein distance](https://github.com/gofixyourself/Analysis-of-Algorithms/tree/Levenshtein/Levenshtein)|:soon:|
 
 ## Legend:
 
