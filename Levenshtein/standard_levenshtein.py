@@ -19,9 +19,3 @@ def levenshtein_distance(first_string, second_string):
             current_row[j] = min(remove, adding, exchange)
 
     return current_row[length_first]
-
-
-
-
-
-
