@@ -12,13 +12,18 @@ def modified_levenstein(first_string, second_string):
     for i in range(1, length_second + 1):
         current_row, previous_row = [i] + [0] * length_first, current_row
         for j in range(1, length_first + 1):
-            remove, adding, exchange = current_row[j - 1] + 1, previous_row[j] + 1, previous_row[j - 1]
-            if first_string[j - 1] != second_string[i - 1]:
-                exchange += 1
-                if j > 1 and first_string[j - 2] == second_string[i - 1]:
-                    transposition = previous_row[j - 2] + 1
-                    current_row[j] = min(remove, adding, exchange, transposition)
-
-            current_row[j] = min(remove, adding, exchange)
+            if j > 1 and i > 1:
+                if first_string[j - 1] != second_string[i - 1]:
+                    current_row[j] = min(current_row[j - 1] + 1, previous_row[j] + 1, previous_row[j - 1],
+                                         previous_row[j - 2] + 1)  # for remove, adding, exchange, transposition
+                else:
+                    current_row[j] = min(current_row[j - 1] + 1, previous_row[j] + 1, previous_row[j - 1] + 1,
+                                         previous_row[j - 2] + 1)
+            else:
+                if first_string[j - 1] != second_string[i - 1]:
+                    current_row[j] = min(current_row[j - 1] + 1, previous_row[j] + 1,
+                                         previous_row[j - 1] + 1)  # for remove, adding, exchange
+                else:
+                    current_row[j] = min(current_row[j - 1] + 1, previous_row[j] + 1, previous_row[j - 1])
 
     return current_row[length_first]
