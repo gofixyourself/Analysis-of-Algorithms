@@ -2,5 +2,5 @@ import string
 import random
 
 
-def generator(size=6, chars=string.ascii_uppercase + string.digits):
-    return ''.join(random.choice(chars) for _ in range(size))
+def generator(chars=string.ascii_uppercase):
+    return ''.join(random.choice(chars) for _ in range(random.randint(1, 6)))
