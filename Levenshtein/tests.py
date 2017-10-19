@@ -2,7 +2,6 @@ import standard_levenshtein as standard
 import modified_levenshtein as modified
 import levenshtein_with_recursion as recursion
 import unittest
-import time
 
 
 class TestsForStandardLevenshtein(unittest.TestCase):
@@ -43,6 +42,26 @@ class TestsForModifiedLevenshtein(unittest.TestCase):
 
     def test_sixth(self):
         self.assertEqual(modified.modified_levenstein("Me", "mE"), 2)
+
+
+class TestsForRecursionLevenshtein(unittest.TestCase):
+    def test_first(self):
+        self.assertEqual(recursion.levenshtein_disctance_recursion("ABC", "ABC"), 0)
+
+    def test_second(self):
+        self.assertEqual(recursion.levenshtein_disctance_recursion("ABC", "ABCDEF"), 3)
+
+    def test_third(self):
+        self.assertEqual(recursion.levenshtein_disctance_recursion("BCDE", "ABC"), 4)
+
+    def test_fourth(self):
+        self.assertEqual(recursion.levenshtein_disctance_recursion("BCDE", "ABCDEF"), 3)
+
+    def test_fiveth(self):
+        self.assertEqual(recursion.levenshtein_disctance_recursion("AAAAB", "BAAAA"), 2)
+
+    def test_sixth(self):
+        self.assertEqual(recursion.levenshtein_disctance_recursion("Me", "mE"), 2)
 
 
 if __name__ == '__main__':
