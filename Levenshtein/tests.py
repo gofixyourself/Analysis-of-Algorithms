@@ -25,5 +25,25 @@ class TestsForStandardLevenshtein(unittest.TestCase):
         self.assertEqual(standard.levenshtein_distance("Me", "mE"), 2)
 
 
+class TestsForModifiedLevenshtein(unittest.TestCase):
+    def test_first(self):
+        self.assertEqual(modified.modified_levenstein("ABC", "ABC"), 0)
+
+    def test_second(self):
+        self.assertEqual(modified.modified_levenstein("ABC", "ABCDEF"), 3)
+
+    def test_third(self):
+        self.assertEqual(modified.modified_levenstein("ABC", "BCDE"), 3)
+
+    def test_fourth(self):
+        self.assertEqual(modified.modified_levenstein("BCDE", "ABCDEF"), 2)
+
+    def test_fiveth(self):
+        self.assertEqual(modified.modified_levenstein("AAAAB", "BAAAA"), 2)
+
+    def test_sixth(self):
+        self.assertEqual(modified.modified_levenstein("Me", "mE"), 2)
+
+
 if __name__ == '__main__':
     unittest.main()
