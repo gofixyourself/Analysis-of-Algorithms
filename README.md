@@ -6,7 +6,8 @@
 
 | Labs  |     Stage     |
 | ------------- |:-------------:|
-|[Levenshtein distance](https://github.com/gofixyourself/Analysis-of-Algorithms/tree/Levenshtein/Levenshtein)|:soon:|
+|[Levenshtein distance](https://github.com/gofixyourself/Analysis-of-Algorithms/tree/master/Levenshtein)|:white_check_mark:|
+|[Sorting Algorithms](https://github.com/gofixyourself/Analysis-of-Algorithms/tree/master/Sorting)|:white_check_mark:|
 
 ## Legend:
 
