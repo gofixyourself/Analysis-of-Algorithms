@@ -28,10 +28,3 @@ def multiplication(matrix_a, matrix_b):
                 matrix_c[i][j] += matrix_a[i][rows_amount_b - 1] * matrix_b[rows_amount_b - 1][j]
 
     return matrix_c
-
-
-if __name__ == '__main__':
-    A = [[1, -1], [2, 0], [3, 0]]
-    B = [[1, 1], [2, 0]]
-
-    print(multiplication(A, B))
